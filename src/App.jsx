@@ -4,10 +4,7 @@ import PatientDash from './components/PatientDash'
 function App() {
 
   return (
-    <div>
-      <Dashboard/>
-      <PatientDash/> 
-    </div>
+    <Dashboard profileName="doctor"/>
   )
 }
 
