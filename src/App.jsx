@@ -1,9 +1,13 @@
 import Dashboard from './components/Dashboard'
+import PatientDash from './components/PatientDash'
 
 function App() {
 
   return (
-    <Dashboard/>
+    <div>
+      <Dashboard/>
+      <PatientDash/> 
+    </div>
   )
 }
 
