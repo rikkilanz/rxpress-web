@@ -1,10 +1,13 @@
-import Dashboard from './components/Dashboard'
+import Dashboard from "./components/Dashboard";
+import Landing from "./components/Landing";
 
 function App() {
-
   return (
-    <Dashboard/>
-  )
+    <div>
+      <Landing />
+      {/* <Dashboard /> */}
+    </div>
+  );
 }
 
-export default App
+export default App;
