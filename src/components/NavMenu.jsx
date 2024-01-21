@@ -17,8 +17,8 @@ const docNav = [
 ];
 
 const patientNav = [
-  { name: "Doctors", path: "/doctors", icon: IdentificationIcon },
-  { name: "Prescriptions", path: "/patient-dash", icon: DocumentTextIcon },
+  { name: "Doctors", path: "/patient-doctors", icon: IdentificationIcon },
+  { name: "Prescriptions", path: "/patient-rx", icon: DocumentTextIcon },
   { name: "Notifications", path: "/notifications", icon: BellAlertIcon },
 ];
 

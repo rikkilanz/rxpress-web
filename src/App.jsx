@@ -12,6 +12,7 @@ import Prescription from "./components/DoctorDash/Prescription";
 import UserProfile from "./components/UserProfile";
 import PatientDoctor from "./components/PatientDash/PatientDoctor";
 import NewPrescription from "./components/DoctorDash/NewPrescription";
+import Notifications from "./components/Notifications";
 import { useEffect } from "react";
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
         <div className="grid grid-cols-4 h-screen">
           <NavMenu profileContext={profile} setProfile={setProfile} />
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard loginContext={profile} />} />
             <Route path="/doctor-patients" element={<Patients />} />
             <Route path="/patient/:id" element={<PatientDetails />} />
             <Route path="/doctor-rx" element={<Prescription />} />
@@ -50,6 +51,7 @@ function App() {
             <Route path="/patient-rx" element={<PatientDash />} />
             <Route path="/patient-doctors" element={<PatientDoctor />} />
             <Route path="/user" element={<UserProfile />} />
+            <Route path="/notifications" element={<Notifications />} />
           </Routes>
         </div>
       )}
