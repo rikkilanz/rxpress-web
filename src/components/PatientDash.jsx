@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import data from "../data/data.json";
 import newOrder from "../data/newOrderData.json";
-import { FunnelIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { FunnelIcon, MagnifyingGlassIcon, ClockIcon, ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
 
 const cols = ["Order ID", "Order Status", "Date", "Doctor", "Company", "Total"];
 
@@ -13,7 +13,8 @@ export default function PatientDash() {
       <h1 className="text-sky-600 text-[48px] font-bold mb-8">Prescriptions</h1>
       <div>
         <div className="text-black flex flex-col bg-white p-8 rounded shadow-md border border-sky-200">
-          <div className="text-primary-300 text-2xl mb-8">
+          <div className="text-primary-300 text-2xl mb-8 flex items-center">
+            <ClockIcon className="w-8 h-8 mr-2" />
             <h2>Upcoming Orders</h2>
           </div>
           {newOrder.map((item) => (
@@ -65,7 +66,8 @@ export default function PatientDash() {
       <div>
         <div className="text-black mt-5 flex flex-col bg-white p-8 rounded shadow-md border border-sky-200">
           <div className="mb-2">
-            <div className="text-primary-300 text-2xl mb-4">
+            <div className="text-primary-300 text-2xl mb-4 flex items-center">
+            <ClipboardDocumentCheckIcon className="w-8 h-8 mr-2" />
               <h2>Your Past Orders</h2>
             </div>
             <div className="flex justify-between mb-8 bg-gray-50 border border-gray-200 p-4 rounded">

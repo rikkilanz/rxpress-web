@@ -28,7 +28,7 @@ export default function Login({ setTheProfile }) {
       <div className="flex h-full">
         <div className="basis-[50%] flex items-center justify-center">
           <div className="w-96">
-            <h1 className="text-4xl font-bold mb-4">Login</h1>
+            <h1 className="text-4xl font-bold mb-4 font-playfair">Login to RxPress</h1>
             <div>
               <div className={`mb-4 ${isValidProfile ? "" : "border-red-500"}`}>
                 <label htmlFor="email" className="sr-only">

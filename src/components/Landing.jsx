@@ -1,4 +1,4 @@
-import { stockImage1, stockImage2 } from "../assets";
+import { stockImage1, stockImage2, rxPressThumb } from "../assets";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -6,7 +6,7 @@ export default function Landing() {
   return (
     <div>
       <Header />
-      <section className="min-h-[500px]" id="hero">
+      <section id="hero">
         <div className="flex">
           <div className="basis-[50%] p-8 flex flex-col justify-center text-[16px]">
             <h1 className="font-playfair text-[48px] font-bold leading-tight">
@@ -66,9 +66,9 @@ export default function Landing() {
       </section>
       <section className="min-h-[500px] mt-8" id="hero">
         <div className="flex">
-          <div className="basis-[50%] h-full">
+          <div className="basis-[50%] h-full shadow-md rounded-lg">
             <img
-              src={stockImage2}
+              src={rxPressThumb}
               alt=""
               className="h-full w-full object-cover"
               style={{ maxHeight: "100%" }}
@@ -76,12 +76,13 @@ export default function Landing() {
           </div>
           <div className="basis-[50%] p-8 flex flex-col justify-center text-[16px]">
             <h1 className="font-playfair text-[48px] font-bold leading-tight">
-              Making it easy for everyone involved.
+              Simplifying the prescription process for everyone.
             </h1>
             <p className="mt-4">
-              Nullam pulvinar arcu vitae blandit tincidunt. Pellentesque
-              habitant morbi tristique senectus et netus et malesuada fames ac
-              turpis egestas.
+              Experience the convenience of managing your prescriptions with
+              just a few clicks. With advanced tracking and notification
+              features, RxPress puts your health first, making prescription
+              delivery hassle-free and efficient.
             </p>
           </div>
         </div>

@@ -77,7 +77,7 @@ export default function NavMenu({ profileContext, setProfile }) {
           ))}
         </nav>
         <button
-          className="mb-8 text-lg text-sky-600 hover:text-sky-500 bg-sky-50/75 px-4 py-2 rounded-md outline-1 outline-sky-200/50 flex items-center outline relative"
+          className="text-lg text-sky-600 hover:text-sky-500 bg-sky-50/75 px-4 py-2 rounded-md outline-1 outline-sky-200/50 flex items-center outline relative"
           onClick={toggleMenu}
         >
           <UserIcon className="w-auto h-5 mr-4" />
