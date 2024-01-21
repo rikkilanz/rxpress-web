@@ -41,11 +41,9 @@ export default function Login({ setTheProfile }) {
             <div className="flex gap-2">
               <NavLink
                 className="text-center bg-primary text-white px-4 py-3 rounded font-medium w-full"
-                to="/login"
-                onClick={() => {
-                  setTheProfile(email);
-                  console.log(email)
-                }}
+                to="/"
+                onClick={() => setTheProfile(email)
+                }
               >
                 Login
               </NavLink>
