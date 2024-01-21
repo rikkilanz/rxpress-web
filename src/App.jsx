@@ -29,7 +29,7 @@ function App() {
           <NavMenu profileContext={profile} setProfile={setProfile}/>
           <Routes>
             {/* Add more routes here as needed */}
-            <Route path="/" element={<DoctorDashboard />} />
+            <Route path="/" element={<DoctorDashboard loginContext={profile}/>} />
             <Route path="/patients" element={<Patients />} />
             <Route path="/patient/:id" element={<PatientDetails/>}/>
             <Route path="/patient-dash" element={<PatientDash/>} />

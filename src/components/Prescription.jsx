@@ -27,20 +27,20 @@ export default function Prescription() {
     <NewPrescription prescriptionFlow={setPrescriptionFlow} />
   ) : (
     <div className="bg-sky-50/75 col-span-3 py-16 px-8 overflow-y-scroll">
-      <div className="">
-        <h1 className="text-sky-600 mb-8 text-[48px] font-bold">
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-sky-600 text-[48px] font-bold">
           Prescriptions
         </h1>
+        <button
+          onClick={() => {
+            setPrescriptionFlow(true);
+          }}
+          className="bg-primary text-white py-2 px-4 rounded-md"
+        >
+          New Prescription +
+        </button>
       </div>
 
-      <button
-        onClick={() => {
-          setPrescriptionFlow(true);
-        }}
-        className="bg-primary text-white py-2 px-4 rounded-md"
-      >
-        New Prescription +
-      </button>
       <div className="mt-8 bg-white p-8 rounded shadow-md border border-sky-200">
         <div className="flex align-center">
           <ClockIcon className="h-8 w-8 text-sky-900" />

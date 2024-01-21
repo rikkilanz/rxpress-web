@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const doctorNames = [
   "Dr. Emily Johnson",
   "Dr. Jonathan Chen",
@@ -13,18 +11,23 @@ const doctorNames = [
   "Dr. Liam Nguyen",
 ];
 
-const getRandomName = () => {
+const getRandomName = (loginContext) => {
   const randomIndex = Math.floor(Math.random() * doctorNames.length);
-  return doctorNames[randomIndex];
+  const doctorName = doctorNames[randomIndex];
+
+  // Check login context and modify the name accordingly
+  return loginContext === "patient"
+    ? doctorName.replace("Dr. ", "")
+    : doctorName;
 };
 
-export default function DoctorDashboard() {
+export default function DoctorDashboard({ loginContext }) {
   return (
     <main className="bg-sky-50/75 col-span-3 py-16 px-8">
       <div className="mb-8">
         <h1 className="text-sky-900 text-2xl font-playfair">
           <span className="font-bold">Good afternoon,</span> <br />
-          <span className="text-4xl">{getRandomName()}</span>
+          <span className="text-4xl">{getRandomName(loginContext)}</span>
         </h1>
       </div>
       <div className="p-8 bg-white shadow-md border border-sky-200 rounded">
