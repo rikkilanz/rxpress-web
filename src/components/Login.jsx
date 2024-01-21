@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { XMarkIcon } from "@heroicons/react/24/solid";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-export default function Login() {
+export default function Login({ setTheProfile }) {
   const [email, setEmail] = useState("");
   return (
     <div className="h-screen w-screen">
@@ -12,7 +12,7 @@ export default function Login() {
       <div className="flex justify-center items-center h-full">
         <div className="w-96">
           <h1 className="text-4xl font-bold mb-4">Login</h1>
-          <form>
+          <div>
             <div className="mb-4">
               <label htmlFor="email" className="sr-only">
                 Email
@@ -42,11 +42,15 @@ export default function Login() {
               <NavLink
                 className="text-center bg-primary text-white px-4 py-3 rounded font-medium w-full"
                 to="/login"
+                onClick={() => {
+                  setTheProfile(email);
+                  console.log(email)
+                }}
               >
                 Login
               </NavLink>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
