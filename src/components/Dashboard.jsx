@@ -1,10 +1,9 @@
-import NavMenu from "./NavMenu"
+import { useState } from "react";
 
 export default function Dashboard() {
     return (
-        <main className="grid grid-cols-4">
-            <NavMenu/>
-            <div className="bg-indigo-900 col-span-3 text-white">Main container here</div>
+        <main className="bg-indigo-900 col-span-3 text-white">
+            <div className="">Main container here</div>
         </main>
     )
 }

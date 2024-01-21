@@ -1,11 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
 import App from './App.jsx'
 import './index.css'
+<<<<<<< HEAD
 import Login from './components/Login.jsx';
 
 const router = createBrowserRouter([
@@ -18,9 +15,14 @@ const router = createBrowserRouter([
     element: <Login/>,
   },
 ]);
+=======
+import {BrowserRouter} from "react-router-dom";
+>>>>>>> main
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
   </React.StrictMode>,
 )

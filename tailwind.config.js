@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: { 
       playfair: ['Playfair Display', 'serif'],
@@ -15,6 +13,9 @@ module.exports = {
         },
       }
     },
+    fontFamily: {
+      sans: ["Noto Sans", "sans-serif"],
+    },
   },
   plugins: [],
-}
+};
