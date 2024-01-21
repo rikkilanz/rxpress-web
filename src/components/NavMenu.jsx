@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { logo } from "../assets";
-import { UserIcon, DocumentTextIcon, IdentificationIcon, BuildingStorefrontIcon } from '@heroicons/react/24/outline'
+import { UserIcon, DocumentTextIcon, IdentificationIcon, BuildingStorefrontIcon, UserCircleIcon } from '@heroicons/react/24/outline'
 
 const docNav = [
     {name: "Patients", path: "/patients", icon: UserIcon},
@@ -12,7 +12,7 @@ const docNav = [
 const patientNav = [
     {name: "Doctors", path: "/doctors", icon: IdentificationIcon},
     {name: "Prescriptions", path: "/patient-dash", icon: DocumentTextIcon},
-    {name: "Pharmacies", path: "/pharmacies", icon: BuildingStorefrontIcon},               
+    {name: "User", path: "/user", icon: UserCircleIcon},               
 ];
 
 const pharmacyNav = [
