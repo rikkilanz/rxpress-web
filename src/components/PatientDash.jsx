@@ -4,17 +4,22 @@ import NavMenu from "./NavMenu";
 import { NavLink } from "react-router-dom";
 import { logo } from "../assets";
 import data from "../data/data.json";
+import newOrder from "../data/newOrderData.json";
 
 
 export default function PatientDash() {
     return(
         <main className="col-span-3">
-            <div className="text-black text-xl p-5">
-                Your Orders
+
+            {/* Past Orders Section */}
+            <div className="text-primary-300 text-2xl mt-5">
+                <h1>Your Past Orders</h1>
             </div>
-            <div className="flex justify-center items-center gap-40">
+
+            {/* Filter Section ( May not get to it but if possible would be a nice feature) */}
+            <div className="flex justify-center items-center gap-40 mt-10">
                 <div>
-                    <h2>From: </h2>
+                    <h2>From:</h2>
                 </div>
                 <div>
                     <h2>To:</h2>
@@ -23,36 +28,85 @@ export default function PatientDash() {
                     <button className="bg-blue-400 text-white p-2 rounded-lg">Submit</button>
                 </div>
             </div>
-            <div className="">
-                <div className="">
-                    <div className="text-black p-5 flex justify-evenly items-center underline">
-                        {/* {data.map((item) => (
-                            <div key={item.id}>
-                                <h2>{item.order_id}</h2>
-                            </div>
-                        ))} */}
-                        <h2>Order Id</h2>
-                        <h2>Date</h2>
-                        <h2>Order Status</h2>
-                        <h2>Doctor</h2>
-                        <h2>Company</h2>
-                        <h2>Subtotal</h2>
-                        <h2>Total</h2>
-                    </div>
-                </div>
 
-                <div className="text-black flex-col justify-center">
+
+            <div>
+                <div className="text-black flex flex-col pb-10 p-10 mt-5 bg-slate-100">
                     {data.map((item) => (
-                            <div className="flex justify-evenly p-5" key={item.id}>
-                                <h3>{item.order_id}</h3>
-                                <h3>{item.date}</h3>
-                                <h3>{item.order_status}</h3>
-                                <h3>{item.doctor}</h3>
-                                <h3>{item.company}</h3>
-                                <h3>{item.subtotal}</h3>
-                                <h3>{item.total}</h3>
+                            <div className="flex gap-20 items-center" key={item.id}>
+                                <div className="m-2">
+                                    <h2 className="text-primary underline pb-2">Order Id</h2>
+                                    <h3>{item.order_id}</h3>
+                                </div>
+                                <div className="m-2">
+                                    <h2 className="text-primary underline pb-2">Order Status</h2>
+                                    <h3>{item.order_status}</h3>
+                                </div>
+                                <div className="m-2">
+                                    <h2 className="text-primary underline pb-2">Date</h2>
+                                    <h3>{item.date}</h3>
+                                </div>
+                                <div className="m-2">
+                                    <h2 className="text-primary underline pb-2">Doctor</h2>
+                                    <h3>{item.doctor}</h3>
+                                </div>
+                                <div className="m-2">
+                                    <h2 className="text-primary underline pb-2">Company</h2>
+                                    <h3>{item.company}</h3>
+                                </div>
+                                <div className="m-2">
+                                    <h2 className="text-primary underline pb-2">Total</h2>
+                                    <h3>{item.total}</h3>
+                                </div>
                             </div>
                         ))}
+                </div>
+
+                {/* Upcoming Order Section */}
+                    
+                <div>
+                    <div className="text-primary-300 text-2xl mt-5">
+                        <h2>Upcoming Orders</h2>
+                    </div>  
+                        
+                    <div className="text-black flex flex-col pb-10 p-10 bg-slate-100">
+                        {newOrder.map((item) => (
+                                <div className="flex gap-8 items-center" key={item.id}>
+                                    <div className="m-2">
+                                        <h2 className="text-primary underline pb-2">Order Id</h2>
+                                        <h3>{item.order_id}</h3>
+                                    </div>
+                                    <div className="m-2">
+                                        <h2 className="text-primary underline pb-2">Order Status</h2>
+                                        <h3>{item.order_status}</h3>
+                                    </div>
+                                    <div className="m-2">
+                                        <h2 className="text-primary underline pb-2">Description</h2>
+                                        <h3>{item.desc}</h3>
+                                    </div>
+                                    <div className="m-2">
+                                        <h2 className="text-primary underline pb-2">Date</h2>
+                                        <h3>{item.date}</h3>
+                                    </div>
+                                    <div className="m-2">
+                                        <h2 className="text-primary underline pb-2">Quantity</h2>
+                                        <h3>{item.qty}</h3>
+                                    </div>
+                                    <div className="m-2">
+                                        <h2 className="text-primary underline pb-2">Doctor</h2>
+                                        <h3>{item.doctor}</h3>
+                                    </div>
+                                    <div className="m-2">
+                                        <h2 className="text-primary underline pb-2">Company</h2>
+                                        <h3>{item.company}</h3>
+                                    </div>
+                                    <div className="m-2">
+                                        <h2 className="text-primary underline pb-2">Total</h2>
+                                        <h3>{item.total}</h3>
+                                    </div>
+                                </div>
+                            ))}
+                    </div>
                 </div>
             </div>
         </main>
