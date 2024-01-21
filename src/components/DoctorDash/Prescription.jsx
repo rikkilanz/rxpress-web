@@ -2,7 +2,7 @@ import React from "react";
 import {
   pendingPrescriptions,
   sentPrescriptions,
-} from "../data/doctorsPrescriptionData";
+} from "../../data/doctorsPrescriptionData";
 
 export default function Prescription() {
   const renderPrescriptionRow = (prescription) => (

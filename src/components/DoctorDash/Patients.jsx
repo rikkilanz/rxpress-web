@@ -61,7 +61,7 @@ export default function Patients() {
                                     {col === "Phone Number" ? patient.phoneNumber : patient[col.toLowerCase()]}
                                 </span>
                                 {col === "Details" &&
-                                    <NavLink to={`/patient/${patient.id}`} state={{ patientDetails: patient }} className="ml-2 font-medium text-sky-600">
+                                    <NavLink to={`/doctor-patient/${patient.id}`} state={{ patientDetails: patient }} className="ml-2 font-medium text-sky-600">
                                         See more
                                     </NavLink>
                                 }

@@ -1,14 +1,17 @@
-import PatientDash from './components/PatientDash'
+import PatientDash from './components/PatientDash/PatientDash'
 import {
   Routes, Route
 } from "react-router-dom";
 import { useState } from "react";
 import NavMenu from "./components/NavMenu";
-import Patients from "./components/Patients";
+import Patients from "./components/DoctorDash/Patients";
 import Landing from "./components/Landing";
 import Login from "./components/Login";
-import DoctorDashboard from './components/DoctorDashboard';
-import PatientDetails from './components/PatientDetails';
+import Dashboard from './components/Dashboard';
+import PatientDetails from './components/DoctorDash/PatientDetails';
+import DoctorPrescriptions from './components/DoctorDash/DoctorPrescriptions';
+import Pharmacies from './components/DoctorDash/Pharmacies';
+import Prescription from './components/DoctorDash/Prescription';
 
 function App() {
   const [profile, setProfile] = useState(null);
@@ -23,11 +26,13 @@ function App() {
         <div className="grid grid-cols-4 h-screen">
           <NavMenu profileContext={profile}/>
           <Routes>
-            {/* Add more routes here as needed */}
-            <Route path="/" element={<DoctorDashboard />} />
-            <Route path="/patients" element={<Patients />} />
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/doctor-patients" element={<Patients />} />
             <Route path="/patient/:id" element={<PatientDetails/>}/>
-            <Route path="/patient-dash" element={<PatientDash/>} />
+            <Route path="/doctor-rx" element={<DoctorPrescriptions/>}/>
+            <Route path="doctor-rx-new" element={<Prescription/>}/>
+            <Route path="/doctor-pharmacies" element={<Pharmacies/>}/>
+            <Route path="/patient-rx" element={<PatientDash/>} />
           </Routes>
         </div>
       )}

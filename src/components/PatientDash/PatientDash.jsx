@@ -1,18 +1,19 @@
 import React from "react";
-import NavMenu from "./NavMenu";
+import NavMenu from "../NavMenu";
 
 import { NavLink } from "react-router-dom";
-import { logo } from "../assets";
-import data from "../data/data.json";
+import { logo } from "../../assets";
+import data from "../../data/data.json";
 
 
 export default function PatientDash() {
     return(
-        <main className="col-span-3">
-            <div className="text-black text-xl p-5">
-                Your Orders
+        <main className="bg-sky-50/75 col-span-3 py-16 px-8 overflow-y-scroll">
+            <div>
+                <h1 className="text-xl text-sky-600 mb-8">Prescriptions</h1>
             </div>
-            <div className="flex justify-center items-center gap-40">
+            <div className="bg-white p-8 rounded shadow-md border border-sky-200">
+                <div className="flex justify-center items-center gap-40">
                 <div>
                     <h2>From: </h2>
                 </div>
@@ -54,6 +55,7 @@ export default function PatientDash() {
                             </div>
                         ))}
                 </div>
+            </div>
             </div>
         </main>
     );
