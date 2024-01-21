@@ -9,6 +9,7 @@ import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Dashboard from './components/Dashboard';
 import PatientDetails from './components/PatientDetails';
+import PatientDoctor from './components/PatientDoctor';
 
 function App() {
   const [profile, setProfile] = useState(null);
@@ -28,6 +29,7 @@ function App() {
             <Route path="/patients" element={<Patients />} />
             <Route path="/patient/:id" element={<PatientDetails/>}/>
             <Route path="/patient-dash" element={<PatientDash/>} />
+            <Route path="/doctors" element={<PatientDoctor/>} />
           </Routes>
         </div>
       )}
