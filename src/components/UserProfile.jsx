@@ -14,9 +14,9 @@ import {
 
 export default function UserProfile() {
   return (
-    <main className="overflow-y-scroll col-span-3">
+    <main className="bg-white col-span-3 py-16 px-8 overflow-y-scroll">
       <div>
-        <h1 className="text-primary font-bold text-xl p-5">Settings</h1>
+        <h1 className="text-sky-600 mb-8 text-[48px] font-bold">Settings</h1>
       </div>
 
       <div className="ml-10 p-6 flex">

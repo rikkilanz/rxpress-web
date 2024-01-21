@@ -43,7 +43,7 @@ export default function Prescription() {
         <div className="flex align-center">
           <ClockIcon className="h-8 w-8 text-sky-900" />
           <h3 className="ml-4 text-[24px] mb-4 text-sky-900 ">
-            Pending prescriptions
+            Pending Prescriptions
           </h3>
         </div>
 
@@ -56,10 +56,10 @@ export default function Prescription() {
               <h4>Check-In ID</h4>
             </div>
             <div className="w-1/5">
-              <h4>Prescription Name</h4>
+              <h4>Prescription</h4>
             </div>
             <div className="w-2/5">
-              <h4>Pharmacy Location</h4>
+              <h4>Pharmacy Name</h4>
             </div>
             <div className="w-1/5">
               <h4>Date Sent</h4>
@@ -73,7 +73,7 @@ export default function Prescription() {
         <div className="flex align-center">
           <TruckIcon className="h-8 w-8 text-sky-900" />
           <h3 className="ml-4 text-[24px] mb-4 text-sky-900 ">
-            Prescription dropped off
+            Dropped off Prescriptions
           </h3>
         </div>
 
@@ -86,10 +86,10 @@ export default function Prescription() {
               <h4>Check-In ID</h4>
             </div>
             <div className="w-1/5">
-              <h4>Prescription Name</h4>
+              <h4>Prescription</h4>
             </div>
             <div className="w-2/5">
-              <h4>Pharmacy Location</h4>
+              <h4>Pharmacy Name</h4>
             </div>
             <div className="w-1/5">
               <h4>Date Sent</h4>
@@ -99,33 +99,6 @@ export default function Prescription() {
           {sentPrescriptions.map(renderPrescriptionRow)}
         </div>
       </div>
-
-      {/* <div className="mt-8 max-h-[300px] overflow-y-scroll">
-        <div className="flex justify-between align-center">
-          <h3 className="text-[24px]">Prescription dropped off</h3>
-        </div>
-        <div className="mt-2">
-          <div className="flex bg-gray-200 rounded-md shadow-md p-4 mb-4 sticky top-0">
-            <div className="w-1/5">
-              <h4 className="font-semibold">Patient Name</h4>
-            </div>
-            <div className="w-1/5">
-              <h4 className="font-semibold">Checkin Id</h4>
-            </div>
-            <div className="w-1/5">
-              <h4 className="font-semibold">Prescription Name</h4>
-            </div>
-            <div className="w-2/5">
-              <h4 className="font-semibold">Pharmacy Location</h4>
-            </div>
-            <div className="w-1/5">
-              <h4 className="font-semibold">Date Sent</h4>
-            </div>
-          </div>
-
-          {sentPrescriptions.map(renderPrescriptionRow)}
-        </div>
-      </div> */}
     </div>
   );
 }

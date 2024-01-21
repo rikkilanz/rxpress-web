@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 const doctorNames = [
   "Dr. Emily Johnson",
   "Dr. Jonathan Chen",
@@ -11,6 +13,14 @@ const doctorNames = [
   "Dr. Liam Nguyen",
 ];
 
+const patientNames = [
+  "Mr. Anderson"
+];
+
+const pharmacyNames = [
+  "Shoppers"
+];
+
 const getRandomName = (loginContext) => {
   const randomIndex = Math.floor(Math.random() * doctorNames.length);
   const doctorName = doctorNames[randomIndex];
@@ -21,15 +31,33 @@ const getRandomName = (loginContext) => {
     : doctorName;
 };
 
-// Monica Todo: update dashboard content per profile type
+export default function DoctorDashboard({ selectedProfile }) {
 
-export default function DoctorDashboard({ loginContext }) {
+  const [profileData, setProfileData] = useState("");
+  
+  useEffect(() => {
+    const selectedProfileData = () => {
+      switch (selectedProfile) {
+        case "doctor":
+          setProfileData(getRandomName(selectedProfile));
+          break;
+        case "patient":
+          setProfileData(patientNames);
+          break;
+        case "pharmacy":
+          setProfileData(pharmacyNames);
+          break;
+      }
+    };
+    selectedProfileData();
+  }, []);
+  
   return (
     <main className="bg-sky-50/75 col-span-3 py-16 px-8">
       <div className="mb-8">
         <h1 className="text-sky-900 text-2xl font-playfair">
           <span className="font-bold">Good afternoon,</span> <br />
-          <span className="text-4xl">{getRandomName(loginContext)}</span>
+          <span className="text-4xl">{profileData}</span>
         </h1>
       </div>
       <div className="p-8 bg-white shadow-md border border-sky-200 rounded">
