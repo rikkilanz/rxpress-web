@@ -24,7 +24,7 @@ function App() {
         </Routes>
       ) : (
         <div className="grid grid-cols-4 h-screen">
-          <NavMenu profileContext={profile}/>
+          <NavMenu profileContext={profile} setProfile={setProfile}/>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/doctor-patients" element={<Patients />} />
