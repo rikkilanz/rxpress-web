@@ -63,7 +63,7 @@ export default function Patients() {
               key={col}
               className={`${i === 2 ? "ml-4" : ""} ${
                 i === 1 ? "ml-10" : ""
-              } text-xl text-sky-900`}
+              } text-sm uppercase text-sky-900`}
             >
               {col}
             </span>
