@@ -7,9 +7,10 @@ import NavMenu from "./components/NavMenu";
 import Patients from "./components/Patients";
 import Landing from "./components/Landing";
 import Login from "./components/Login";
-import Dashboard from './components/Dashboard';
+import DoctorDashboard from './components/DoctorDashboard';
 import PatientDetails from './components/PatientDetails';
 import PatientDoctor from './components/PatientDoctor';
+import Prescription from './components/Prescription';
 
 function App() {
   const [profile, setProfile] = useState(null);
@@ -25,11 +26,12 @@ function App() {
           <NavMenu profileContext={profile}/>
           <Routes>
             {/* Add more routes here as needed */}
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<DoctorDashboard />} />
             <Route path="/patients" element={<Patients />} />
             <Route path="/patient/:id" element={<PatientDetails/>}/>
             <Route path="/patient-dash" element={<PatientDash/>} />
             <Route path="/doctors" element={<PatientDoctor/>} />
+            <Route path="/px" element={<Prescription/>} />
           </Routes>
         </div>
       )}
