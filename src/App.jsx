@@ -9,9 +9,11 @@ import Landing from "./components/Landing";
 import Login from "./components/Login";
 import Dashboard from './components/Dashboard';
 import PatientDetails from './components/DoctorDash/PatientDetails';
-import DoctorPrescriptions from './components/DoctorDash/DoctorPrescriptions';
 import Pharmacies from './components/DoctorDash/Pharmacies';
 import Prescription from './components/DoctorDash/Prescription';
+import UserProfile from './components/UserProfile';
+import PatientDoctor from './components/PatientDash/PatientDoctor';
+import NewPrescription from './components/DoctorDash/NewPrescription';
 
 function App() {
   const [profile, setProfile] = useState(null);
@@ -29,10 +31,12 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/doctor-patients" element={<Patients />} />
             <Route path="/patient/:id" element={<PatientDetails/>}/>
-            <Route path="/doctor-rx" element={<DoctorPrescriptions/>}/>
-            <Route path="doctor-rx-new" element={<Prescription/>}/>
+            <Route path="/doctor-rx" element={<Prescription/>}/>
+            <Route path="doctor-rx-new" element={<NewPrescription/>}/>
             <Route path="/doctor-pharmacies" element={<Pharmacies/>}/>
             <Route path="/patient-rx" element={<PatientDash/>} />
+            <Route path='/patient-doctors' element={<PatientDoctor/>}/>
+            <Route path="/user" element={<UserProfile/>}/>
           </Routes>
         </div>
       )}

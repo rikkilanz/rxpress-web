@@ -2,7 +2,7 @@ import React from "react";
 import {
   pendingPrescriptions,
   sentPrescriptions,
-} from "../data/doctorsPrescriptionData";
+} from "../../data/doctorsPrescriptionData";
 import NewPrescription from "./NewPrescription";
 import { useState } from "react";
 import { TruckIcon, ClockIcon } from "@heroicons/react/24/outline";

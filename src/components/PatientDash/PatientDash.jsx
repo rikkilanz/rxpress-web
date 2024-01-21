@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import data from "../data/data.json";
-import newOrder from "../data/newOrderData.json";
+import data from "../../data/data.json";
+import newOrder from "../../data/newOrderData.json";
 import {
   FunnelIcon,
   MagnifyingGlassIcon,
