@@ -1,4 +1,7 @@
-import { Routes, Route } from "react-router-dom";
+import PatientDash from './components/PatientDash'
+import {
+  Routes, Route
+} from "react-router-dom";
 import { useState } from "react";
 import NavMenu from "./components/NavMenu";
 import Patients from "./components/Patients";
@@ -20,6 +23,7 @@ function App() {
           <Routes>
             {/* Add more routes here as needed */}
             <Route path="/patients" element={<Patients />} />
+            <Route path="/patient-dash" element={<PatientDash/>} />
           </Routes>
         </div>
       )}
