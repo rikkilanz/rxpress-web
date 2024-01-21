@@ -7,6 +7,7 @@ import {
   DocumentTextIcon,
   IdentificationIcon,
   BuildingStorefrontIcon,
+  BellAlertIcon
 } from "@heroicons/react/24/outline";
 
 const docNav = [
@@ -16,9 +17,9 @@ const docNav = [
 ];
 
 const patientNav = [
-    {name: "Doctors", path: "/patient-doctors", icon: IdentificationIcon},
-    {name: "Prescriptions", path: "/patient-rx", icon: DocumentTextIcon},
-    {name: "Pharmacies", path: "/pharmacies", icon: BuildingStorefrontIcon},               
+  { name: "Doctors", path: "/doctors", icon: IdentificationIcon },
+  { name: "Prescriptions", path: "/patient-dash", icon: DocumentTextIcon },
+  { name: "Notifications", path: "/notifications", icon: BellAlertIcon },
 ];
 
 const pharmacyNav = [
