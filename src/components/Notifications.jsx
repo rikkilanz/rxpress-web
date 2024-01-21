@@ -22,6 +22,7 @@ export default function Notifications({acceptedScreenFlow}) {
 
                     <div>
                         <button 
+                            className="hover:text-primary"
                             onClick={() => {
                                setAcceptedScreen(true);
                         }}>Accept
@@ -31,6 +32,7 @@ export default function Notifications({acceptedScreenFlow}) {
 
                     <div>
                         <button 
+                            className="hover:text-primary"
                             onClick={() => {
                                 setAcceptedScreen(false)
                         }}>Decline
@@ -51,15 +53,15 @@ export default function Notifications({acceptedScreenFlow}) {
             )} : { acceptedScreen === false && (
                 <div className="absolute h-screen w-screen bg-gray-500 bg-opacity-50 top-0 left-0 flex items-center justify-center">
                     <div className="bg-white p-5">
-                        <h3>Are you sure?</h3>
+                        <h3 className="text-xl">Are you sure?</h3>
                         <div className="flex flex-col justify-center gap-4">
-                            <button className="mt-4" onClick={() => {
+                            <button className="mt-4 hover:text-primary" onClick={() => {
                                     setDeclineScreen(true)
                                     setAcceptedScreen(null)
 
                                 }}>Yes
                             </button>
-                            <NavLink to="/" className="text-center">
+                            <NavLink to="/" className="text-center hover:text-primary">
                                 Cancel
                             </NavLink>
                         </div>
