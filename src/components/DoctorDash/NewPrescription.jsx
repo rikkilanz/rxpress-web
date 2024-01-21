@@ -1,5 +1,4 @@
 import { patientData } from "../../data/patientData";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { CheckCircleIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router-dom";
@@ -76,7 +75,7 @@ export default function NewPrescription({ prescriptionFlow }) {
                 </p>
                 <p>Phone Number: {selectedPatient.phoneNumber}</p>
                 <p>Email: {selectedPatient.email}</p>
-                <p>Date of Birth: {selectedPatient.dateOfBirth}</p>
+                <p>Date of Birth: {selectedPatient.dob}</p>
               </div>
               <div className="">
                 <h3 className="text-lg font-semibold mt-8 mb-2">
@@ -129,7 +128,7 @@ export default function NewPrescription({ prescriptionFlow }) {
 
               <p>Phone Number: {selectedPatient.phoneNumber}</p>
               <p>Email: {selectedPatient.email}</p>
-              <p>Date of Birth: {selectedPatient.dateOfBirth}</p>
+              <p>Date of Birth: {selectedPatient.dob}</p>
             </div>
           </div>
           <div className="mt-4 col-span-3 px-4 bg-white p-8 rounded shadow-md border border-sky-200">

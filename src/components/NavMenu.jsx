@@ -3,14 +3,14 @@ import { NavLink } from "react-router-dom";
 import { logo } from "../assets";
 import {
   UserIcon,
-  UsersIcon,
+  UserGroupIcon,
   DocumentTextIcon,
   IdentificationIcon,
   BuildingStorefrontIcon,
 } from "@heroicons/react/24/outline";
 
 const docNav = [
-    {name: "Patients", path: "/doctor-patients", icon: UserIcon},
+    {name: "Patients", path: "/doctor-patients", icon: UserGroupIcon},
     {name: "Prescriptions", path: "/doctor-rx", icon: DocumentTextIcon},
     {name: "Pharmacies", path: "/doctor-pharmacies", icon: BuildingStorefrontIcon},               
 ];
