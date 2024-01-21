@@ -3,8 +3,12 @@ import {
   pendingPrescriptions,
   sentPrescriptions,
 } from "../data/doctorsPrescriptionData";
+import NewPrescription from "./NewPrescription";
+import { useState } from "react";
 
 export default function Prescription() {
+  const [prescriptionFlow, setPrescriptionFlow] = useState(false);
+
   const renderPrescriptionRow = (prescription) => (
     <div
       key={prescription.id}
@@ -18,7 +22,9 @@ export default function Prescription() {
     </div>
   );
 
-  return (
+  return prescriptionFlow ? (
+    <NewPrescription />
+  ) : (
     <div className="col-span-3 px-4 overflow-y-scroll">
       <div className="sticky top-0 w-full bg-white">
         <h1 className="text-[48px] font-bold py-10">Prescriptions</h1>
@@ -27,7 +33,12 @@ export default function Prescription() {
       <div className="mt-8">
         <div className="flex justify-between align-center">
           <h3 className="text-[24px]">Prescription Details</h3>
-          <button className="bg-primary text-white py-2 px-4 rounded-md">
+          <button
+            onClick={() => {
+              setPrescriptionFlow(true);
+            }}
+            className="bg-primary text-white py-2 px-4 rounded-md"
+          >
             New Prescription +
           </button>
         </div>
