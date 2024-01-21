@@ -8,11 +8,11 @@ export default function Header() {
         <img src={logo} alt="" className="h-12 w-auto" />
       </div>
       <nav>
-        <ul className="flex gap-x-2 items-center">
-            <NavLink className="hover:font-bold hover:text-primary">About</NavLink>
+        <ul className="flex items-center text-[16px]">
+            <NavLink className="hover:font-bold hover:text-primary py-4 px-6">About</NavLink>
             <NavLink className="hover:font-bold hover:text-primary">Careers</NavLink>
-            <NavLink className="hover:font-bold hover:text-primary">Developers</NavLink>
-            <NavLink className="text-white bg-primary py-4 px-6 rounded-full" to="/login">Log In</NavLink>
+            <NavLink className="hover:font-bold hover:text-primary py-4 px-6">Developers</NavLink>
+            <NavLink className="text-white bg-primary rounded-full py-4 px-6 hover:bg-primary-300" to="/login">Log In</NavLink>
         </ul>
       </nav>
     </div>

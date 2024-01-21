@@ -5,8 +5,9 @@ import PatientDash from './components/PatientDash'
 function App() {
   return (
     <div>
-      <Dashboard/>
-      <PatientDash/> 
+      <Landing/>
+      {/* <Dashboard/>
+      <PatientDash/>  */}
     </div>
   )
 }
