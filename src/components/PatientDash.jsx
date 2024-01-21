@@ -1,18 +1,36 @@
 import React from "react";
 import NavMenu from "./NavMenu";
+
 import { NavLink } from "react-router-dom";
 import { logo } from "../assets";
+import data from "../data/data.json";
 
 
 export default function PatientDash() {
     return(
-        <main className="">
+        <main className="col-span-3">
             <div className="text-black text-xl p-5">
                 Your Orders
+            </div>
+            <div className="flex justify-center items-center gap-40">
+                <div>
+                    <h2>From: </h2>
+                </div>
+                <div>
+                    <h2>To:</h2>
+                </div>
+                <div>
+                    <button className="bg-blue-400 text-white p-2 rounded-lg">Submit</button>
+                </div>
             </div>
             <div className="">
                 <div className="">
                     <div className="text-black p-5 flex justify-evenly items-center underline">
+                        {/* {data.map((item) => (
+                            <div key={item.id}>
+                                <h2>{item.order_id}</h2>
+                            </div>
+                        ))} */}
                         <h2>Order Id</h2>
                         <h2>Date</h2>
                         <h2>Order Status</h2>
@@ -22,43 +40,21 @@ export default function PatientDash() {
                         <h2>Total</h2>
                     </div>
                 </div>
-                <div className="text-black p-5 flex justify-evenly items-center">
-                    <h3>#142341</h3>
-                    <h3>Oct 1 2024</h3>
-                    <h3>Recieved</h3>
-                    <h3>Dr. Blank</h3>
-                    <h3>Pharmasave</h3>
-                    <h3>$32.10</h3>
-                    <h3>$34.20</h3>
-                </div>
-                <div className="text-black p-5 flex justify-evenly items-center">
-                    <h3>#142341</h3>
-                    <h3>Oct 1 2024</h3>
-                    <h3>Recieved</h3>
-                    <h3>Dr. Blank</h3>
-                    <h3>Pharmasave</h3>
-                    <h3>$32.10</h3>
-                    <h3>$34.20</h3>
-                </div>
-                <div className="text-black p-5 flex justify-evenly items-center">
-                    <h3>#142341</h3>
-                    <h3>Oct 1 2024</h3>
-                    <h3>Recieved</h3>
-                    <h3>Dr. Blank</h3>
-                    <h3>Pharmasave</h3>
-                    <h3>$32.10</h3>
-                    <h3>$34.20</h3>
-                </div>
-                <div className="text-black p-5 flex justify-evenly items-center">
-                    <h3>#142341</h3>
-                    <h3>Oct 1 2024</h3>
-                    <h3>Recieved</h3>
-                    <h3>Dr. Blank</h3>
-                    <h3>Pharmasave</h3>
-                    <h3>$32.10</h3>
-                    <h3>$34.20</h3>
+
+                <div className="text-black flex-col justify-center">
+                    {data.map((item) => (
+                            <div className="flex justify-evenly p-5" key={item.id}>
+                                <h3>{item.order_id}</h3>
+                                <h3>{item.date}</h3>
+                                <h3>{item.order_status}</h3>
+                                <h3>{item.doctor}</h3>
+                                <h3>{item.company}</h3>
+                                <h3>{item.subtotal}</h3>
+                                <h3>{item.total}</h3>
+                            </div>
+                        ))}
                 </div>
             </div>
         </main>
-    )
+    );
 }

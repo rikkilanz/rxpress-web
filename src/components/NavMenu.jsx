@@ -11,7 +11,7 @@ const docNav = [
 
 const patientNav = [
     {name: "Doctors", path: "/doctors", icon: IdentificationIcon},
-    {name: "Prescriptions", path: "/px", icon: DocumentTextIcon},
+    {name: "Prescriptions", path: "/patient-dash", icon: DocumentTextIcon},
     {name: "Pharmacies", path: "/pharmacies", icon: BuildingStorefrontIcon},               
 ];
 
