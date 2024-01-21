@@ -33,7 +33,7 @@ export default function Patients() {
     return (
         <div className="bg-sky-50/75 col-span-3 py-16 px-8 overflow-y-scroll">
             <div>
-                <h1 className="text-xl text-sky-600 mb-8">Patients</h1>
+                <h1 className="text-sky-600 mb-8 text-[48px] font-bold">Patients</h1>
             </div>
             <div className="bg-white p-8 rounded shadow-md border border-sky-200">
                 <div className="flex justify-between mb-8 bg-gray-50 border border-gray-200 p-4 rounded">
