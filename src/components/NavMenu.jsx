@@ -84,23 +84,20 @@ export default function NavMenu({ profileContext, setProfile }) {
           <p className="">Profile</p>
           {isMenuOpen && (
             <div className="bg-white border rounded-md absolute right-0 mt-2 shadow-md">
-              <ul>
-                <li>
-                  <button
-                    onClick={closeMenu}
-                    className="w-full px-4 py-2 text-sky-600 hover:bg-sky-50"
-                  >
-                    Settings
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => setProfile(null)}
-                    className="w-full px-4 py-2 text-sky-600 hover:bg-sky-50"
-                  >
-                    Sign Out
-                  </button>
-                </li>
+              <ul className="flex flex-col">
+                <NavLink
+                  to="/user"
+                  className="w-full px-4 py-2 text-sky-600 hover:bg-sky-50"
+                >
+                  Settings
+                </NavLink>
+                <NavLink
+                  to="/"
+                  onClick={() => setProfile(null)}
+                  className="w-full px-4 py-2 text-sky-600 hover:bg-sky-50"
+                >
+                  Sign Out
+                </NavLink>
               </ul>
             </div>
           )}
