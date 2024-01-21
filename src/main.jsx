@@ -6,12 +6,22 @@ import {
 } from "react-router-dom";
 import App from './App.jsx'
 import './index.css'
+import PatientDash from './components/PatientDash.jsx';
+import Prescription from './prescription/Prescription.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
   },
+  {
+    path: "/patients",
+    element: <PatientDash/>,
+  },
+  {
+    path: "/prescription",
+    element: <Prescription/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
