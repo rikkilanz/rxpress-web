@@ -1,5 +1,5 @@
 import React from "react";
-import { stockImage5 } from "../assets";
+import { stockImage5 } from "../../assets";
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 const doctors = [

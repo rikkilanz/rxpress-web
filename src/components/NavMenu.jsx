@@ -10,21 +10,21 @@ import {
 } from "@heroicons/react/24/outline";
 
 const docNav = [
-  { name: "Patients", path: "/patients", icon: UsersIcon },
-  { name: "Prescriptions", path: "/px", icon: DocumentTextIcon },
-  { name: "Pharmacies", path: "/pharmacies", icon: BuildingStorefrontIcon },
+    {name: "Patients", path: "/doctor-patients", icon: UserIcon},
+    {name: "Prescriptions", path: "/doctor-rx", icon: DocumentTextIcon},
+    {name: "Pharmacies", path: "/doctor-pharmacies", icon: BuildingStorefrontIcon},               
 ];
 
 const patientNav = [
-  { name: "Doctors", path: "/doctors", icon: IdentificationIcon },
-  { name: "Prescriptions", path: "/patient-dash", icon: DocumentTextIcon },
-  //   { name: "Pharmacies", path: "/pharmacies", icon: BuildingStorefrontIcon },
+    {name: "Doctors", path: "/patient-doctors", icon: IdentificationIcon},
+    {name: "Prescriptions", path: "/patient-rx", icon: DocumentTextIcon},
+    {name: "Pharmacies", path: "/pharmacies", icon: BuildingStorefrontIcon},               
 ];
 
 const pharmacyNav = [
-  { name: "Doctors", path: "/doctors", icon: IdentificationIcon },
-  { name: "Prescriptions", path: "/px", icon: DocumentTextIcon },
-  { name: "Pharmacies", path: "/pharmacies", icon: BuildingStorefrontIcon },
+    {name: "Doctors", path: "/pharmacy-doctors", icon: IdentificationIcon},
+    {name: "Prescriptions", path: "/pharmacy-rx", icon: DocumentTextIcon},
+    {name: "Patients", path: "/pharmacy-patients", icon: BuildingStorefrontIcon},               
 ];
 
 export default function NavMenu({ profileContext, setProfile }) {
