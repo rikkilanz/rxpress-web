@@ -21,6 +21,8 @@ const getRandomName = (loginContext) => {
     : doctorName;
 };
 
+// Monica Todo: update dashboard content per profile type
+
 export default function DoctorDashboard({ loginContext }) {
   return (
     <main className="bg-sky-50/75 col-span-3 py-16 px-8">

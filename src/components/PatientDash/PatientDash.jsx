@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import data from "../data/data.json";
-import newOrder from "../data/newOrderData.json";
-import { FunnelIcon, MagnifyingGlassIcon, ClockIcon, ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
+import data from "../../data/data.json";
+import newOrder from "../../data/newOrderData.json";
+import {
+  FunnelIcon,
+  MagnifyingGlassIcon,
+  ClockIcon,
+  ClipboardDocumentCheckIcon,
+} from "@heroicons/react/24/outline";
 
 const cols = ["Order ID", "Order Status", "Date", "Doctor", "Company", "Total"];
 
@@ -14,46 +19,78 @@ export default function PatientDash() {
       <div>
         <div className="text-black flex flex-col bg-white p-8 rounded shadow-md border border-sky-200">
           <div className="text-primary-300 text-2xl mb-8 flex items-center">
-            <ClockIcon className="w-8 h-8 mr-2" />
-            <h2>Upcoming Orders</h2>
+            <ClockIcon className="w-8 h-8 mr-2 text-sky-900" />
+            <h2 className="text-[24px] text-sky-900">Upcoming Orders</h2>
           </div>
+          <div className="flex flex-wrap gap-8 items-center justify-between border-b border-gray-200 py-4">
+            <div className="flex flex-col">
+              <span className="text-sm text-gray-500 uppercase mb-1">
+                Order Id
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm text-gray-500 uppercase mb-1">
+                Order Status
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm text-gray-500 uppercase mb-1">
+                Description
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm text-gray-500 uppercase mb-1">Date</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm text-gray-500 uppercase mb-1">
+                Quantity
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm text-gray-500 uppercase mb-1">
+                Doctor
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm text-gray-500 uppercase mb-1">
+                Company
+              </span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm text-gray-500 uppercase mb-1">
+                Total
+              </span>
+            </div>
+          </div>
+          {/* List of Data */}
           {newOrder.map((item) => (
             <div
-              className="flex gap-8 items-center justify-between"
+              className="flex flex-wrap gap-8 items-center justify-between border-b border-gray-200 py-4"
               key={item.id}
             >
-              <div>
-                <h2 className="text-primary underline pb-2">Order Id</h2>
-                <h3>{item.order_id}</h3>
+              <div className="flex flex-col">
+                <span className="text-md">{item.order_id}</span>
               </div>
-              <div>
-                <h2 className="text-primary underline pb-2">Order Status</h2>
-                <h3>{item.order_status}</h3>
+              <div className="flex flex-col">
+                <span>{item.order_status}</span>
               </div>
-              <div>
-                <h2 className="text-primary underline pb-2">Description</h2>
-                <h3>{item.desc}</h3>
+              <div className="flex flex-col">
+                <span className="text-md">{item.desc}</span>
               </div>
-              <div>
-                <h2 className="text-primary underline pb-2">Date</h2>
-                <h3>{item.date}</h3>
+              <div className="flex flex-col">
+                <span className="text-md">{item.date}</span>
               </div>
-              <div>
-                {" "}
-                <h2 className="text-primary underline pb-2">Quantity</h2>
-                <h3>{item.qty}</h3>
+              <div className="flex flex-col">
+                <span className="text-md">{item.qty}</span>
               </div>
-              <div>
-                <h2 className="text-primary underline pb-2">Doctor</h2>
-                <h3>{item.doctor}</h3>
+              <div className="flex flex-col">
+                <span className="text-md">{item.doctor}</span>
               </div>
-              <div>
-                <h2 className="text-primary underline pb-2">Company</h2>
-                <h3>{item.company}</h3>
+              <div className="flex flex-col">
+                <span className="text-md">{item.company}</span>
               </div>
-              <div>
-                <h2 className="text-primary underline pb-2">Total</h2>
-                <h3>{item.total}</h3>
+              <div className="flex flex-col">
+                <span className="text-md">{item.total}</span>
               </div>
             </div>
           ))}
@@ -67,8 +104,8 @@ export default function PatientDash() {
         <div className="text-black mt-5 flex flex-col bg-white p-8 rounded shadow-md border border-sky-200">
           <div className="mb-2">
             <div className="text-primary-300 text-2xl mb-4 flex items-center">
-            <ClipboardDocumentCheckIcon className="w-8 h-8 mr-2" />
-              <h2>Your Past Orders</h2>
+              <ClipboardDocumentCheckIcon className="w-8 h-8 mr-2 text-sky-900" />
+              <h2 className="text-[24px] text-sky-900">Your Past Orders</h2>
             </div>
             <div className="flex justify-between mb-8 bg-gray-50 border border-gray-200 p-4 rounded">
               <div className="flex items-center">
@@ -95,7 +132,7 @@ export default function PatientDash() {
                 key={col}
                 className={`${i === 2 ? "" : ""} ${
                   i === 1 ? "" : ""
-                } text-xl text-sky-900`}
+                } text-sm uppercase text-sky-900`}
               >
                 {col}
               </span>

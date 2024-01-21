@@ -1,4 +1,4 @@
-import { patientData } from "../data/patientData";
+import { patientData } from "../../data/patientData";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { CheckCircleIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";

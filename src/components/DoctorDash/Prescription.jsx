@@ -2,7 +2,7 @@ import React from "react";
 import {
   pendingPrescriptions,
   sentPrescriptions,
-} from "../data/doctorsPrescriptionData";
+} from "../../data/doctorsPrescriptionData";
 import NewPrescription from "./NewPrescription";
 import { useState } from "react";
 import { TruckIcon, ClockIcon } from "@heroicons/react/24/outline";
@@ -28,9 +28,7 @@ export default function Prescription() {
   ) : (
     <div className="bg-sky-50/75 col-span-3 py-16 px-8 overflow-y-scroll">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-sky-600 text-[48px] font-bold">
-          Prescriptions
-        </h1>
+        <h1 className="text-sky-600 text-[48px] font-bold">Prescriptions</h1>
         <button
           onClick={() => {
             setPrescriptionFlow(true);
@@ -44,13 +42,13 @@ export default function Prescription() {
       <div className="mt-8 bg-white p-8 rounded shadow-md border border-sky-200">
         <div className="flex align-center">
           <ClockIcon className="h-8 w-8 text-sky-900" />
-          <h3 className="ml-4 text-[24px] mb-4 text-sky-900">
+          <h3 className="ml-4 text-[24px] mb-4 text-sky-900 ">
             Pending prescriptions
           </h3>
         </div>
 
         <div className="mt-2 max-h-[300px] overflow-y-scroll">
-          <div className="flex bg-sky-50 text-xl text-sky-900 rounded-md shadow-md p-4 mb-4 sticky top-0">
+          <div className="flex bg-sky-50  text-sky-900 rounded-md shadow-md p-4 mb-4 sticky top-0 text-sm uppercase">
             <div className="w-1/5">
               <h4>Patient Name</h4>
             </div>
@@ -74,13 +72,13 @@ export default function Prescription() {
       <div className="mt-8 bg-white p-8 rounded shadow-md border border-sky-200">
         <div className="flex align-center">
           <TruckIcon className="h-8 w-8 text-sky-900" />
-          <h3 className="ml-4 text-[24px] mb-4 text-sky-900">
+          <h3 className="ml-4 text-[24px] mb-4 text-sky-900 ">
             Prescription dropped off
           </h3>
         </div>
 
         <div className="mt-2 max-h-[300px] overflow-y-scroll">
-          <div className="flex bg-sky-50 text-xl text-sky-900 rounded-md shadow-md p-4 mb-4 sticky top-0">
+          <div className="flex bg-sky-50 text-sky-900 rounded-md shadow-md p-4 mb-4 sticky top-0 text-sm uppercase">
             <div className="w-1/5">
               <h4>Patient Name</h4>
             </div>
