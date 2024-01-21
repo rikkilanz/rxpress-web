@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: { 
       playfair: ['Playfair Display', 'serif'],
+      sans: ["Noto Sans", "sans-serif"],
     },
     extend: {
       colors:{
@@ -12,9 +13,6 @@ module.exports = {
           300: "#61C2FF",
         },
       }
-    },
-    fontFamily: {
-      sans: ["Noto Sans", "sans-serif"],
     },
   },
   plugins: [],
