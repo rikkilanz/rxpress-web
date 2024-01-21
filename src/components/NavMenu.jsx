@@ -51,8 +51,8 @@ export default function NavMenu({profileContext}) {
             </div>
             <nav className="flex flex-col ">
                 {selectedNav.map((link) => (
-                    <NavLink key={link.name} to={link.path} className="mb-8 text-xl text-sky-600 hover:text-sky-500 bg-sky-50/75 px-4 py-2 rounded-md outline-1 outline-sky-200/50 flex items-center outline">
-                        {<link.icon className="w-auto h-8 mr-4" />}
+                    <NavLink key={link.name} to={link.path} className="mb-8 text-lg text-sky-600 hover:text-sky-500 bg-sky-50/75 px-4 py-2 rounded-md outline-1 outline-sky-200/50 flex items-center outline">
+                        {<link.icon className="w-auto h-5 mr-4" />}
                         <p className="">{link.name}</p>
                     </NavLink>
                 ))}
