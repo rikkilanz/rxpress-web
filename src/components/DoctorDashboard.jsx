@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const doctorNames = [
   "Dr. Emily Johnson",
   "Dr. Jonathan Chen",
