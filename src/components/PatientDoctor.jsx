@@ -3,7 +3,6 @@ import NavMenu from "./NavMenu";
 
 import { stockImage5 } from "../assets";
 
-
 export default function PatientDoctor() {
     return (
         <div className="p-10">
@@ -18,7 +17,7 @@ export default function PatientDoctor() {
                 </div>
                 <div className="flex justify-between mt-6">
                     <div className="hover:text-primary-300 cursor-pointer font-semibold">
-                        <h3>Email</h3>
+                        <button>Email</button>
                     </div>
                     <div className="hover:text-primary-300 cursor-pointer font-semibold">
                         <h3>Call</h3>

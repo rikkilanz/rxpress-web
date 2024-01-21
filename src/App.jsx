@@ -11,6 +11,7 @@ import DoctorDashboard from './components/DoctorDashboard';
 import PatientDetails from './components/PatientDetails';
 import PatientDoctor from './components/PatientDoctor';
 import Prescription from './components/Prescription';
+import UserProfile from './components/UserProfile';
 
 function App() {
   const [profile, setProfile] = useState(null);
@@ -32,6 +33,7 @@ function App() {
             <Route path="/patient-dash" element={<PatientDash/>} />
             <Route path="/doctors" element={<PatientDoctor/>} />
             <Route path="/px" element={<Prescription/>} />
+            <Route path="/user" element={<UserProfile/>} />
           </Routes>
         </div>
       )}
