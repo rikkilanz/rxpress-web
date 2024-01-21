@@ -9,6 +9,7 @@ import Landing from "./components/Landing";
 import Login from "./components/Login";
 import DoctorDashboard from './components/DoctorDashboard';
 import PatientDetails from './components/PatientDetails';
+import PatientDoctor from './components/PatientDoctor';
 import Prescription from './components/Prescription';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/patients" element={<Patients />} />
             <Route path="/patient/:id" element={<PatientDetails/>}/>
             <Route path="/patient-dash" element={<PatientDash/>} />
+            <Route path="/doctors" element={<PatientDoctor/>} />
             <Route path="/px" element={<Prescription/>} />
           </Routes>
         </div>
