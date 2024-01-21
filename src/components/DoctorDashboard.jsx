@@ -18,7 +18,7 @@ const getRandomName = () => {
     return clinicNames[randomIndex];
 };
 
-export default function Dashboard() {
+export default function DoctorDashboard() {
     return (
         <main className="bg-sky-50/75 col-span-3 py-16 px-8">
             <div className="mb-8">

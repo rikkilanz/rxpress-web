@@ -7,7 +7,7 @@ import NavMenu from "./components/NavMenu";
 import Patients from "./components/Patients";
 import Landing from "./components/Landing";
 import Login from "./components/Login";
-import Dashboard from './components/Dashboard';
+import DoctorDashboard from './components/DoctorDashboard';
 import PatientDetails from './components/PatientDetails';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
           <NavMenu profileContext={profile}/>
           <Routes>
             {/* Add more routes here as needed */}
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<DoctorDashboard />} />
             <Route path="/patients" element={<Patients />} />
             <Route path="/patient/:id" element={<PatientDetails/>}/>
             <Route path="/patient-dash" element={<PatientDash/>} />
