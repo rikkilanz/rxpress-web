@@ -1,6 +1,7 @@
 import PatientDash from './components/PatientDash'
 import {
-  Routes, Route
+  Routes, 
+  Route
 } from "react-router-dom";
 import { useState } from "react";
 import NavMenu from "./components/NavMenu";
@@ -12,6 +13,7 @@ import PatientDetails from './components/PatientDetails';
 import PatientDoctor from './components/PatientDoctor';
 import Prescription from './components/Prescription';
 import UserProfile from './components/UserProfile';
+import Notifications from './components/Notifications';
 
 function App() {
   const [profile, setProfile] = useState(null);
@@ -34,6 +36,7 @@ function App() {
             <Route path="/doctors" element={<PatientDoctor/>} />
             <Route path="/px" element={<Prescription/>} />
             <Route path="/user" element={<UserProfile/>} />
+            <Route path="/notifications" element={<Notifications/>} />
           </Routes>
         </div>
       )}
