@@ -45,7 +45,7 @@ export default function NavMenu({profile}) {
     }, []);
 
     return (
-        <div className="bg-white flex flex-col py-12 px-6">
+        <div className="bg-white flex flex-col py-12 px-6 border-r border-sky-200/50">
             <div className="mb-8">
                 <NavLink to="/" className="flex flex-col">
                     <img src={logo} alt="" className="h-16 w-auto mb-4" />
